@@ -1,0 +1,119 @@
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Teal9: #087f5b;
+  --darkGray: #343a40;
+  --lightGray: #868e96;
+  --veryLightGray: #ced4da;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  color: var(--darkGray);
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.accordion_wrapper {
+  /* background-color: #f8f9fa; */
+  width: 700px;
+}
+
+.accordion_questions {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  gap: 24px;
+}
+.accordion_question_answwer {
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+}
+.question {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  justify-content: space-between;
+  /* align-content: center;
+  align-items: center; */
+
+  gap: 24px;
+  /* margin-bottom: 32px; */
+  /* justify-items: start; */
+}
+.number,
+.title_question {
+  font-size: 24px;
+  font-weight: 500;
+  /* color: var(--Teal9); */
+}
+.number {
+  color: var(--veryLightGray);
+}
+.title_question {
+}
+
+.chevron-icon-down {
+  width: 24px;
+  height: 24px;
+  color: var(--Teal9);
+}
+
+.answer {
+  display: none;
+}
+.answer p {
+  color: var(--darkGray);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+.answer ul {
+  color: var(--lightGray);
+  margin-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.active {
+  border-top: 4px solid var(--Teal9);
+  color: var(--Teal9);
+}
+.active .number {
+  color: var(--Teal9);
+  font-weight: 700;
+}
+
+.active .question {
+  margin-bottom: 32px;
+}
+.active .title_question {
+  font-weight: 700;
+}
+
+.active .answer {
+  display: block;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.active .chevron-icon-down {
+  transform: rotate(180deg);
+}
